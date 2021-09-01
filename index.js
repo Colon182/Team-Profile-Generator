@@ -1,6 +1,6 @@
-const Manager = require("./lib/Manager-starter");
+const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern-starter");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -33,6 +33,26 @@ function appMenu() {
       // CREATE OBJECTS OF QUESTIONS HERE FOR MANAGER
       // Strongly recommend to add validate property function for id and email
       //
+      {
+        type: 'input',
+        name: 'managerName',
+        message: "What is your manager's name?",
+      },
+      {
+        type: 'input',
+        name: 'managerId',
+        message: "What is your manager's Id?",
+      },
+      {
+        type: 'input',
+        name: 'managerEmail',
+        message: "What is your manager's email?",
+      },
+      {
+        type: 'input',
+        name: 'managerOfficeNumber',
+        message: "What is your manager's office number?",
+      },
     ]).then(answers => {
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       teamMembers.push(manager);
@@ -74,6 +94,26 @@ function appMenu() {
       // YOUR CODE HERE
       // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
       //
+      {
+        type: 'input',
+        name: 'engineerName',
+        message: "What is your engineer's name?",
+      },
+      {
+        type: 'input',
+        name: 'engineerId',
+        message: "What is your engineer's Id?",
+      },
+      {
+        type: 'input',
+        name: 'engineerEmail',
+        message: "What is your engineer's email?",
+      },
+      {
+        type: 'input',
+        name: 'engineerGithub',
+        message: "What is your engineer's Github username?",
+      },
     ]).then(answers => {
       //
       // YOUR CODE HERE
