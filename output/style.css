@@ -1,0 +1,13 @@
+.team-heading {
+    background-color: rgb(226, 52, 52);
+    color: white;
+}
+
+.card-header {
+    background-color: rgb(60, 60, 218);
+    color: white;
+}
+
+.card-body {
+    background-color: whitesmoke;
+}
