@@ -21,7 +21,7 @@ const idArray = [];
 
 function appMenu() {
   // create manager first, then afer manager we will create the team by asking the user which type of employee to create
-  //  Based on the choice, we will craeye that employee object
+  //  Based on the choice, we will create that employee object
   // Loop through the create team until user is done from create employee
   // then we will use the employee objects created to build the team
   
@@ -122,6 +122,9 @@ function appMenu() {
       // 2. ADD (PUSH) THE ENGINEER VARIABLE TO the teamMembers ARRAY
       // 3. ADD (PUSH) THE ENGINERR ID TO THE idArray ARRAY
       //
+      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+      teamMembers.push(engineer);
+      idArray.push(answers.engineerId);
 
       createTeam();
     });
@@ -133,6 +136,26 @@ function appMenu() {
       // YOUR CODE HERE
       // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
       //
+      {
+        type: 'input',
+        name: 'internName',
+        message: "What is your intern's name?",
+      },
+      {
+        type: 'input',
+        name: 'internId',
+        message: "What is your intern's Id?",
+      },
+      {
+        type: 'input',
+        name: 'internEmail',
+        message: "What is your intern's email?",
+      },
+      {
+        type: 'input',
+        name: 'internSchool',
+        message: "What school does your intern attend?",
+      },
     ]).then(answers => {
       //
       // YOUR CODE HERE
