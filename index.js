@@ -164,6 +164,9 @@ function appMenu() {
       // 2. ADD (PUSH) THE INTERN VARIABLE TO the teamMembers ARRAY
       // 3. ADD (PUSH) THE INTERN ID TO THE idArray ARRAY
       //
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+      teamMembers.push(intern);
+      idArray.push(answers.internId);
 
       createTeam();
     });
